@@ -67,9 +67,9 @@ public class Main {
     };
 
     // while statement
-    int countNum = 10;
+    int countNum = 5;
     int secondsToSleep = 1;
-    while (countNum > 1){
+    while (countNum > 0){
       System.out.println(countNum);
       try {
         // stop thread for 1 second
@@ -84,6 +84,25 @@ public class Main {
     }
     System.out.println("BOOOOM!");
 
-  }
+    // for loop
+    for (int i=2; i<=10; i+=2){
+      // print even numbers from 0 to 10
+      System.out.println("Event number: "+i);
+    };
+    // for each loop
+    String[][] employees = {
+      {"Huy", "Team Wakandata"},
+      {"Dzung", "Team Wakandata"},
+      {"Huyen", "Div X"},
+      {"Binh", "Div SBC"},
+    };
+    for (String[] employeeTeam: employees){
+      System.out.printf(
+          "Member: %s from %s\n",
+          employeeTeam[0],
+          employeeTeam[1]
+        );
+    };
+  };
 }
 
