@@ -50,7 +50,7 @@ public class Main {
 
     // switch statement (match)
     // Using a single expression in the switch
-    // brilliant suggestion by ChatGPT
+    // brilliant combined statement, suggested by ChatGPT
     int myAge = 23;
     boolean amIGrinding = true;
     switch (myAge * 10 + (amIGrinding ? 1 : 0)) {
@@ -65,6 +65,25 @@ public class Main {
         default: // (optional) if no valid cases to switch
             System.out.println("Chill Bro!");
     };
+
+    // while statement
+    int countNum = 10;
+    int secondsToSleep = 1;
+    while (countNum > 1){
+      System.out.println(countNum);
+      try {
+        // stop thread for 1 second
+        Thread.sleep(secondsToSleep * 1000);
+      } catch (InterruptedException ie) {
+        // when thread is stopping
+        // other might interupt this Thread
+        // causing InterruptedException
+        Thread.currentThread().interrupt();
+      };
+      countNum--;
+    }
+    System.out.println("BOOOOM!");
+
   }
 }
 
