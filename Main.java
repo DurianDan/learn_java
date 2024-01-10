@@ -6,14 +6,33 @@ public class Main {
     System.out.println(f1);
     System.out.println(d1);
 
+    // char must be surrounded by single quote ''
     char charH = 'H';
-    int charHIndexASCII = charH; // auto convert char into ASCII index of the character
-   // this is "widening", type char is smaller than typr "int"
-   short smallerNumber = (short) charHIndexASCII;
-   // this is "narrowing", type "short" is smaller than type "int"
-   // will eveluate at runtime
-   // might throw error if value is bigger than converted type.
-   System.out.println(smallerNumber);
+
+    // this is "widening", type char is smaller than type "int"
+    // auto convert char into ASCII index of the character
+    int charHIndexASCII = charH;
+
+    // this is "narrowing", type "short" is smaller than type "int"
+    // will eveluate at runtime
+    // might throw error if value is bigger than converted type.
+    short smallerNumber = (short) charHIndexASCII;
+
+    System.out.println(smallerNumber);
+
+    String myFirstJavaString = "Never gonna give you candy";
+    System.out.println(
+      "The length of my first Java String is "+myFirstJavaString.length()
+    );
+    System.out.printf(
+      "The uppercase version of my first Java String is %s\n and the lowecase version is %s\n",
+      myFirstJavaString.toUpperCase(),
+      myFirstJavaString.toLowerCase()
+    );
+    System.out.println(
+      "The index of the word 'candy' is "+
+      myFirstJavaString.indexOf("candy")
+    );
   }
 }
 
