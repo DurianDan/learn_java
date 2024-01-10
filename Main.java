@@ -1,10 +1,36 @@
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
+    Main Learning = new Main();
+    Learning.numbersTypes();
+    Learning.typeCasting();
+    Learning.stringManipulations();
+    Learning.mathOperations();
+    Learning.ifElseStatement("Never gonna give you up");
+    Learning.switchStatementChatGPTexpression();
+    Learning.whileLoopThreadWait();
+    Learning.forLoop();
+  };
+
+  static void printSection(String sectionName){
+    // System.out use the buffer
+    // not like Python, will flush the buffer every newline character
+    // this object does not.
+    // and sometimes will return intervened output in the console.
+    // especially when the string is long, and formatting is complex
+    System.out.printf("\n_____ Section : %s \n",sectionName);
+  };
+
+  void numbersTypes(){
+    this.printSection("Numbers Types");
     float f1 = 35E3f;
     double d1 = 12e4d; // "E" and "e" are both "exponential", not case sensitive
     System.out.println(f1);
     System.out.println(d1);
+  };
+
+  void typeCasting(){
+    this.printSection("Type Casting");
 
     // char must be surrounded by single quote ''
     char charH = 'H';
@@ -19,36 +45,44 @@ public class Main {
     short smallerNumber = (short) charHIndexASCII;
 
     System.out.println(smallerNumber);
+  };
 
-    // String manipulation
-    String myFirstJavaString = "Never gonna give you up";
+  void stringManipulations(){
+    this.printSection("String manipulation");
+    String stringToManipulate = "Never gonna give you up";
     System.out.println(
-      "The length of my first Java String is "+myFirstJavaString.length()
+      "The length of my first Java String is "+stringToManipulate.length()
     );
     System.out.printf(
       "The uppercase version of my first Java String is %s\n and the lowecase version is %s\n",
-      myFirstJavaString.toUpperCase(),
-      myFirstJavaString.toLowerCase()
+      stringToManipulate.toUpperCase(),
+      stringToManipulate.toLowerCase()
     );
     System.out.println(
       "The index of the word 'up' is "+
-      myFirstJavaString.indexOf("up")
+      stringToManipulate.indexOf("up")
     );
+  }
 
-    // Math
+  void mathOperations(){
+    this.printSection("Math");
     System.out.println(
       "The quare root of 4.7 is "
       + Math.sqrt(4.7f) // default return is double
     );
+  };
 
-    // if else
-    if (myFirstJavaString == "Never gonna give you up"){
+  void ifElseStatement(String lyric){
+    this.printSection( "if else");
+    if (lyric == "Never gonna give you up"){
       System.out.println("Never gonna let you down");
     }else{
       System.out.println("*Wrong song!");
     };
+  };
 
-    // switch statement (match)
+  void switchStatementChatGPTexpression(){
+    this.printSection("switch statement (match)");
     // Using a single expression in the switch
     // brilliant combined statement, suggested by ChatGPT
     int myAge = 23;
@@ -65,8 +99,10 @@ public class Main {
         default: // (optional) if no valid cases to switch
             System.out.println("Chill Bro!");
     };
+  };
 
-    // while statement
+  void whileLoopThreadWait(){
+    this.printSection("while statement");
     int countNum = 5;
     int secondsToSleep = 1;
     while (countNum > 0){
@@ -83,8 +119,10 @@ public class Main {
       countNum--;
     }
     System.out.println("BOOOOM!");
+  };
 
-    // for loop
+  void forLoop(){
+    this.printSection("for loop, for each loop");
     for (int i=2; i<=10; i+=2){
       // print even numbers from 0 to 10
       System.out.println("Event number: "+i);
@@ -96,6 +134,7 @@ public class Main {
       {"Huyen", "Div X"},
       {"Binh", "Div SBC"},
     };
+    System.out.printf("There are %d employees\n", employees.length);
     for (String[] employeeTeam: employees){
       System.out.printf(
           "Member: %s from %s\n",
