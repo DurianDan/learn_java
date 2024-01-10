@@ -57,10 +57,12 @@ public class Main {
         case 231:
             System.out.println("I will champion one day");
             break;
+            // "break" is optional, when this case is valid 
+            // and you don't want the other cases to be validate anymore
         case 240:
             System.out.println("Get your ass up, you are not done yet!");
             break;
-        default:
+        default: // (optional) if no valid cases to switch
             System.out.println("Chill Bro!");
     };
   }
