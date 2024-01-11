@@ -1,7 +1,9 @@
+import java.util.Scanner; // user input
+
 class Employee {
-  int age;
-  String name;
-  float seniority;
+  private int age;
+  private String name;
+  private float seniority;
 
   public Employee(
     int age,
@@ -12,6 +14,12 @@ class Employee {
     this.name=name;
     this.seniority=seniority;
   }
+
+  // encapsulation => security 
+  //   and allow more modification in the future
+  String getName(){return this.name;};
+  int getAge(){return this.age;};
+  float getSeniority(){return this.seniority;};
 }
 
 enum CompareResult {
@@ -44,11 +52,19 @@ public class Main {
     System.out.println(compare(empL, empR));
     System.out.println(compare(2, 3));
   };
-  
+
+  void printUserInput(){
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter username: ");
+    String userName = myObj.nextLine();
+    System.out.println("Username is: " + userName);
+    myObj.close();
+  }
+
   static CompareResult compare(Employee empLeft, Employee empRight){
-    if (empLeft.seniority > empRight.seniority){
+    if (empLeft.getSeniority() > empRight.getSeniority()){
       return CompareResult.HIGHER;
-    } else if (empLeft.seniority == empRight.seniority){
+    } else if (empLeft.getSeniority() == empRight.getSeniority()){
       return CompareResult.EQUAL;
     } else{
       return CompareResult.LOWER;
