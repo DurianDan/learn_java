@@ -1,9 +1,10 @@
 package mypack;
 
-public class Employee {
+public abstract class Employee {
     private int age;
     private String name;
     private float seniority;
+    public abstract String getPosition();
   
     public Employee(
       int age,
