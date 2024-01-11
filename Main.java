@@ -1,15 +1,22 @@
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
-    Main Learning = new Main();
-    Learning.numbersTypes();
-    Learning.typeCasting();
-    Learning.stringManipulations();
-    Learning.mathOperations();
-    Learning.ifElseStatement("Never gonna give you up");
-    Learning.switchStatementChatGPTexpression();
-    Learning.whileLoopThreadWait();
-    Learning.forLoop();
+
+    // static methods can be called without instance  
+    Main.numbersTypes();
+    Main.typeCasting();
+    Main.stringManipulations();
+    Main.mathOperations();
+    Main.ifElseStatement("Never gonna give you up");
+    Main.switchStatementChatGPTexpression();
+
+
+    // non-static methods needs to be called will an instace.
+    // This.whileLoopThreadWait() is also not allowed
+    //    because `main` is a static method, cant call instance's attributes and methods
+    Main MainInstance = new Main();
+    MainInstance.whileLoopThreadWait();
+    MainInstance.forLoop();
   };
 
   static void printSection(String sectionName){
@@ -21,16 +28,16 @@ public class Main {
     System.out.printf("\n_____ Section : %s \n",sectionName);
   };
 
-  void numbersTypes(){
-    this.printSection("Numbers Types");
+  static void numbersTypes(){
+    Main.printSection("Numbers Types");
     float f1 = 35E3f;
     double d1 = 12e4d; // "E" and "e" are both "exponential", not case sensitive
     System.out.println(f1);
     System.out.println(d1);
   };
 
-  void typeCasting(){
-    this.printSection("Type Casting");
+  static void typeCasting(){
+    Main.printSection("Type Casting");
 
     // char must be surrounded by single quote ''
     char charH = 'H';
@@ -47,8 +54,8 @@ public class Main {
     System.out.println(smallerNumber);
   };
 
-  void stringManipulations(){
-    this.printSection("String manipulation");
+  static void stringManipulations(){
+    Main.printSection("String manipulation");
     String stringToManipulate = "Never gonna give you up";
     System.out.println(
       "The length of my first Java String is "+stringToManipulate.length()
@@ -64,16 +71,16 @@ public class Main {
     );
   }
 
-  void mathOperations(){
-    this.printSection("Math");
+  static void mathOperations(){
+    Main.printSection("Math");
     System.out.println(
       "The quare root of 4.7 is "
       + Math.sqrt(4.7f) // default return is double
     );
   };
 
-  void ifElseStatement(String lyric){
-    this.printSection( "if else");
+  static void ifElseStatement(String lyric){
+    Main.printSection( "if else");
     if (lyric == "Never gonna give you up"){
       System.out.println("Never gonna let you down");
     }else{
@@ -81,8 +88,8 @@ public class Main {
     };
   };
 
-  void switchStatementChatGPTexpression(){
-    this.printSection("switch statement (match)");
+  static void switchStatementChatGPTexpression(){
+    Main.printSection("switch statement (match)");
     // Using a single expression in the switch
     // brilliant combined statement, suggested by ChatGPT
     int myAge = 23;
@@ -102,7 +109,7 @@ public class Main {
   };
 
   void whileLoopThreadWait(){
-    this.printSection("while statement");
+    Main.printSection("while statement");
     int countNum = 5;
     int secondsToSleep = 1;
     while (countNum > 0){
@@ -122,7 +129,7 @@ public class Main {
   };
 
   void forLoop(){
-    this.printSection("for loop, for each loop");
+    Main.printSection("for loop, for each loop");
     for (int i=2; i<=10; i+=2){
       // print even numbers from 0 to 10
       System.out.println("Event number: "+i);
