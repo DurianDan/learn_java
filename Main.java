@@ -1,5 +1,9 @@
 import java.util.Scanner; // user input
-import mypack.*;
+
+import mypack.EmployeePosition.Developer;
+import mypack.EmployeePosition.TechLead;
+import mypack.Employee;
+import mypack.CompareResult;
 
 public class Main {
   public static void main(String[] args) {
@@ -21,9 +25,8 @@ public class Main {
     MainInstance.whileLoopThreadWait();
     MainInstance.forLoop();
 
-    Employee
-      empL = new Employee(23, "Huy", 1.6f),
-      empR = new Employee(23, "Dzung", 2f);
+    Developer empL = new Developer(23, "Huy", 1.6f);
+    TechLead empR = new TechLead(23, "Dzung", 2f);
     System.out.println(compare(empL, empR));
     System.out.println(compare(2, 3));
 
