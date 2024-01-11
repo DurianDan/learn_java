@@ -1,3 +1,23 @@
+class Employee {
+  int age;
+  String name;
+  float seniority;
+
+  public Employee(
+    int age,
+    String name,
+    float seniority
+  ){
+    this.age=age;
+    this.name=name;
+    this.seniority=seniority;
+  }
+}
+
+enum CompareResult {
+  HIGHER, EQUAL, LOWER
+}
+
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
@@ -6,7 +26,7 @@ public class Main {
     numbersTypes(); // can be called directly
     typeCasting();
     stringManipulations();
-    Main.mathOperations(); // or like a static method og another class
+    Main.mathOperations(); // or like a static method of another class
     Main.ifElseStatement("Never gonna give you up");
     Main.switchStatementChatGPTexpression();
 
@@ -17,7 +37,33 @@ public class Main {
     Main MainInstance = new Main();
     MainInstance.whileLoopThreadWait();
     MainInstance.forLoop();
+
+    Employee
+      empL = new Employee(23, "Huy", 1.6f),
+      empR = new Employee(23, "Dzung", 2f);
+    System.out.println(compare(empL, empR));
+    System.out.println(compare(2, 3));
   };
+  
+  static CompareResult compare(Employee empLeft, Employee empRight){
+    if (empLeft.seniority > empRight.seniority){
+      return CompareResult.HIGHER;
+    } else if (empLeft.seniority == empRight.seniority){
+      return CompareResult.EQUAL;
+    } else{
+      return CompareResult.LOWER;
+    }
+  }
+
+  static CompareResult compare(int numLeft, int numRight){
+    if (numLeft > numRight){
+      return CompareResult.HIGHER;
+    } else if (numLeft == numRight){
+      return CompareResult.EQUAL;
+    } else{
+      return CompareResult.LOWER;
+    }
+  }
 
   static void printSection(String sectionName){
     // System.out use the buffer
