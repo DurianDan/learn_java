@@ -1,30 +1,5 @@
 import java.util.Scanner; // user input
-
-class Employee {
-  private int age;
-  private String name;
-  private float seniority;
-
-  public Employee(
-    int age,
-    String name,
-    float seniority
-  ){
-    this.age=age;
-    this.name=name;
-    this.seniority=seniority;
-  }
-
-  // encapsulation => security 
-  //   and allow more modification in the future
-  String getName(){return this.name;};
-  int getAge(){return this.age;};
-  float getSeniority(){return this.seniority;};
-}
-
-enum CompareResult {
-  HIGHER, EQUAL, LOWER
-}
+import mypack.*;
 
 public class Main {
   public static void main(String[] args) {
@@ -51,6 +26,8 @@ public class Main {
       empR = new Employee(23, "Dzung", 2f);
     System.out.println(compare(empL, empR));
     System.out.println(compare(2, 3));
+
+    MainInstance.printUserInput();
   };
 
   void printUserInput(){
