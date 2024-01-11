@@ -3,10 +3,10 @@ public class Main {
     System.out.println("Hello World");
 
     // static methods can be called without instance  
-    Main.numbersTypes();
-    Main.typeCasting();
-    Main.stringManipulations();
-    Main.mathOperations();
+    numbersTypes(); // can be called directly
+    typeCasting();
+    stringManipulations();
+    Main.mathOperations(); // or like a static method og another class
     Main.ifElseStatement("Never gonna give you up");
     Main.switchStatementChatGPTexpression();
 
