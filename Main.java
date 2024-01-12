@@ -19,7 +19,6 @@ public class Main {
     BasicJava.mathOperations();
     BasicJava.ifElseStatement("Never gonna give you up");
     BasicJava.switchStatementChatGPTexpression();
-
     // non-static methods needs to be called will an instace.
     // This.whileLoopThreadWait() is also not allowed
     // because `main` is a static method, cant call instance's attributes and
@@ -27,28 +26,23 @@ public class Main {
     BasicJava BasicInstance = new BasicJava();
     BasicInstance.whileLoopThreadWait();
     BasicInstance.forLoop();
-
     // interfaces, abstractions
     Developer empL = new Developer(23, "Huy", 1.6f);
     TechLead empR = new TechLead(23, "Dzung", 2f);
     Manager newManager = new Manager(37, "Mickola", 8f);
-    
     // overloaded function "compare"
     System.out.println(CompareUtils.compare(empL, empR));
     // can be used with int or `Employee` object
     System.out.println(CompareUtils.compare(2, 3));
-
+    // user input
+    BasicInstance.printUserInput();
+    // datetime
+    LearnDateTime.testLearn();
     // Array stream
     Employee[] allEmployees = {empL, empR, newManager};
     LearnArray.employeesMostSenority(allEmployees);
-
-    // user input
-    BasicInstance.printUserInput();
-    
-    // datetime
-    LearnDateTime.testLearn();
-
     // Array string list
+    LearnArray.leanrArrayList();
   };
 
   static void numbersTypes() {
