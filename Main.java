@@ -60,6 +60,7 @@ public class Main {
     String fileName = "meomeo.text";
     LearnFileHandling.createFile(fileName);
     LearnFileHandling.writeFile(fileName);
+    LearnFileHandling.readFile(fileName);
   };
 
   static void numbersTypes() {
