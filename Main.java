@@ -1,5 +1,7 @@
 import mypack.EmployeePosition.Developer;
 import mypack.EmployeePosition.TechLead;
+import mypack.LearnThreads.PredictableThread;
+import mypack.LearnThreads.UnpredictableThread;
 import mypack.EmployeePosition.Manager;
 import mypack.CompareUtils;
 import mypack.Employee;
@@ -45,7 +47,14 @@ public class Main {
     // Array string list
     LearnArray.leanrArrayList();
 
+    // HashMap
     LearnHashMap.testLearn();
+
+    // Threads
+    UnpredictableThread threadNono = new UnpredictableThread();
+    PredictableThread threadGood = new PredictableThread();
+    threadNono.testThread();
+    threadGood.testThread();
   };
 
   static void numbersTypes() {
