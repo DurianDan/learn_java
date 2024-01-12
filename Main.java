@@ -1,57 +1,37 @@
 import mypack.EmployeePosition.Developer;
 import mypack.EmployeePosition.TechLead;
-import mypack.Employee;
-import mypack.CompareResult;
+import mypack.CompareUtils;
 import mypack.BasicJava;
 
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
 
-    // static methods can be called without instance  
+    // static methods can be called without instance
     numbersTypes(); // can be called directly
     BasicJava.typeCasting(); // or a static method of another class
     BasicJava.stringManipulations();
-    BasicJava.mathOperations(); 
+    BasicJava.mathOperations();
     BasicJava.ifElseStatement("Never gonna give you up");
     BasicJava.switchStatementChatGPTexpression();
 
-
     // non-static methods needs to be called will an instace.
     // This.whileLoopThreadWait() is also not allowed
-    //    because `main` is a static method, cant call instance's attributes and methods
+    // because `main` is a static method, cant call instance's attributes and
+    // methods
     BasicJava BasicInstance = new BasicJava();
     BasicInstance.whileLoopThreadWait();
     BasicInstance.forLoop();
 
     Developer empL = new Developer(23, "Huy", 1.6f);
     TechLead empR = new TechLead(23, "Dzung", 2f);
-    System.out.println(compare(empL, empR));
-    System.out.println(compare(2, 3));
+    System.out.println(CompareUtils.compare(empL, empR));
+    System.out.println(CompareUtils.compare(2, 3));
 
     BasicInstance.printUserInput();
   };
 
-  static CompareResult compare(Employee empLeft, Employee empRight){
-    if (empLeft.getSeniority() > empRight.getSeniority()){
-      return CompareResult.HIGHER;
-    } else if (empLeft.getSeniority() == empRight.getSeniority()){
-      return CompareResult.EQUAL;
-    } else{
-      return CompareResult.LOWER;
-    }
-  }
-
-  static CompareResult compare(int numLeft, int numRight){
-    if (numLeft > numRight){
-      return CompareResult.HIGHER;
-    } else if (numLeft == numRight){
-      return CompareResult.EQUAL;
-    } else{
-      return CompareResult.LOWER;
-    }
-  }
-  static void numbersTypes(){
+  static void numbersTypes() {
     BasicJava.printSection("Numbers Types");
     float f1 = 35E3f;
     double d1 = 12e4d; // "E" and "e" are both "exponential", not case sensitive
@@ -59,4 +39,3 @@ public class Main {
     System.out.println(d1);
   };
 }
-

@@ -1,12 +1,11 @@
 package mypack;
 
 public class EmployeePosition {
-    public static class Developer extends Employee{
+    public static class Developer extends Employee {
         public Developer(
-            int age,
-            String name,
-            float seniority
-        ) {
+                int age,
+                String name,
+                float seniority) {
             super(age, name, seniority);
         }
 
@@ -16,15 +15,14 @@ public class EmployeePosition {
         }
     }
 
-    public static class TechLead extends Employee{
+    public static class TechLead extends Employee {
         public TechLead(
-            int age,
-            String name,
-            float seniority
-            ) {
-                super(age, name, seniority);
-            }
-            
+                int age,
+                String name,
+                float seniority) {
+            super(age, name, seniority);
+        }
+
         @Override
         public String getPosition() {
             return "Tech Lead";
