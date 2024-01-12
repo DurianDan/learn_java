@@ -16,6 +16,14 @@ public class LearnArray {
       System.out.println("Employee with the most seniority is: "+employeeMostSenior);  
     }
 
+    public static void printEmployeePositions(
+        Employee[] allEmployees
+    ){
+        CommonUtils.printSection("Lambda expression");
+        Arrays.stream(allEmployees).forEach(emp -> {
+            System.out.println(emp.getPosition());
+        });
+    }
     public static void leanrArrayList(){
         CommonUtils.printSection("ArrayList: and array that can be expanded");
         ArrayList<String> boxingPunchs = new ArrayList<String>();

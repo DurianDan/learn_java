@@ -7,6 +7,7 @@ import mypack.CompareUtils;
 import mypack.Employee;
 import mypack.BasicJava;
 import mypack.LearnDateTime;
+import mypack.LearnFileHandling;
 import mypack.LearnHashMap;
 import mypack.CommonUtils;
 import mypack.LearnArray;
@@ -27,7 +28,7 @@ public class Main {
     // because `main` is a static method, cant call instance's attributes and
     // methods
     BasicJava BasicInstance = new BasicJava();
-    BasicInstance.whileLoopThreadWait();
+    // BasicInstance.whileLoopThreadWait();
     BasicInstance.forLoop();
     // interfaces, abstractions
     Developer empL = new Developer(23, "Huy", 1.6f);
@@ -46,15 +47,19 @@ public class Main {
     LearnArray.employeesMostSenority(allEmployees);
     // Array string list
     LearnArray.leanrArrayList();
-
+    // Lambda exressions
+    LearnArray.printEmployeePositions(allEmployees);
     // HashMap
     LearnHashMap.testLearn();
-
     // Threads
     UnpredictableThread threadNono = new UnpredictableThread();
     PredictableThread threadGood = new PredictableThread();
     threadNono.testThread();
     threadGood.testThread();
+    // File handling
+    String fileName = "meomeo.text";
+    LearnFileHandling.createFile(fileName);
+    LearnFileHandling.writeFile(fileName);
   };
 
   static void numbersTypes() {
