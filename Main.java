@@ -3,11 +3,12 @@ import mypack.EmployeePosition.TechLead;
 import mypack.EmployeePosition.Manager;
 import mypack.CompareUtils;
 import mypack.Employee;
+import mypack.BasicJava;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.time.LocalDateTime; // import the LocalDate class
 
-import mypack.BasicJava;
 
 public class Main {
   public static void main(String[] args) {
@@ -29,12 +30,17 @@ public class Main {
     BasicInstance.whileLoopThreadWait();
     BasicInstance.forLoop();
 
+    // interfaces, abstractions
     Developer empL = new Developer(23, "Huy", 1.6f);
     TechLead empR = new TechLead(23, "Dzung", 2f);
     Manager newManager = new Manager(37, "Mickola", 8f);
+    
+    // overloaded function "compare"
     System.out.println(CompareUtils.compare(empL, empR));
+    // can be used with int or `Employee` object
     System.out.println(CompareUtils.compare(2, 3));
 
+    // Array stream
     Employee[] allEmployees = {empL, empR, newManager};
     Employee employeeMostSenior = Arrays
       .stream( allEmployees)
@@ -42,7 +48,11 @@ public class Main {
       .orElse(null);
     System.out.println("Employee with the most seniority is: "+employeeMostSenior);
 
+    // user input
     BasicInstance.printUserInput();
+
+    // LocalDateTime
+    System.out.println(LocalDateTime.now());
   };
 
   static void numbersTypes() {
