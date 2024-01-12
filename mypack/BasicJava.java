@@ -12,17 +12,8 @@ public class BasicJava {
     myObj.close();
   }
 
-  public static void printSection(String sectionName) {
-    // System.out use the buffer
-    // not like Python, will flush the buffer every newline character
-    // this object does not.
-    // and sometimes will return intervened output in the console.
-    // especially when the string is long, and formatting is complex
-    System.out.printf("\n_____ Section : %s \n", sectionName);
-  };
-
   public static void typeCasting() {
-    BasicJava.printSection("Type Casting");
+    CommonUtils.printSection("Type Casting");
 
     // char must be surrounded by single quote ''
     char charH = 'H';
@@ -40,7 +31,7 @@ public class BasicJava {
   };
 
   public static void stringManipulations() {
-    BasicJava.printSection("String manipulation");
+    CommonUtils.printSection("String manipulation");
     String stringToManipulate = "Never gonna give you up";
     System.out.println(
         "The length of my first Java String is " + stringToManipulate.length());
@@ -54,7 +45,7 @@ public class BasicJava {
   }
 
   public static void mathOperations() {
-    BasicJava.printSection("Math");
+    CommonUtils.printSection("Math");
     System.out.println(
         "The quare root of 4.7 is "
             + Math.sqrt(4.7f) // default return is double
@@ -62,7 +53,7 @@ public class BasicJava {
   };
 
   public static void ifElseStatement(String lyric) {
-    BasicJava.printSection("if else");
+    CommonUtils.printSection("if else");
     if (lyric == "Never gonna give you up") {
       System.out.println("Never gonna let you down");
     } else {
@@ -72,7 +63,7 @@ public class BasicJava {
   };
 
   public static void switchStatementChatGPTexpression() {
-    BasicJava.printSection("switch statement (match)");
+    CommonUtils.printSection("switch statement (match)");
     // Using a single expression in the switch
     // brilliant combined statement, suggested by ChatGPT
     int myAge = 23;
@@ -93,7 +84,7 @@ public class BasicJava {
   };
 
   public void whileLoopThreadWait() {
-    BasicJava.printSection("while statement");
+    CommonUtils.printSection("while statement");
     int countNum = 5;
     int secondsToSleep = 1;
     while (countNum > 0) {
@@ -114,7 +105,7 @@ public class BasicJava {
   };
 
   public void forLoop() {
-    BasicJava.printSection("for loop, for each loop");
+    CommonUtils.printSection("for loop, for each loop");
     for (int i = 2; i <= 10; i += 2) {
       // print even numbers from 0 to 10
       System.out.println("Event number: " + i);

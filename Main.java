@@ -4,11 +4,9 @@ import mypack.EmployeePosition.Manager;
 import mypack.CompareUtils;
 import mypack.Employee;
 import mypack.BasicJava;
-
-import java.util.Arrays;
-import java.util.Comparator;
-import java.time.LocalDateTime; // import the LocalDate class
-
+import mypack.LearnDateTime;
+import mypack.CommonUtils;
+import mypack.LearnArray;
 
 public class Main {
   public static void main(String[] args) {
@@ -42,21 +40,19 @@ public class Main {
 
     // Array stream
     Employee[] allEmployees = {empL, empR, newManager};
-    Employee employeeMostSenior = Arrays
-      .stream( allEmployees)
-      .max(Comparator.comparing(Employee::getSeniority))
-      .orElse(null);
-    System.out.println("Employee with the most seniority is: "+employeeMostSenior);
+    LearnArray.employeesMostSenority(allEmployees);
 
     // user input
     BasicInstance.printUserInput();
+    
+    // datetime
+    LearnDateTime.testLearn();
 
-    // LocalDateTime
-    System.out.println(LocalDateTime.now());
+    // Array string list
   };
 
   static void numbersTypes() {
-    BasicJava.printSection("Numbers Types");
+    CommonUtils.printSection("Numbers Types");
     float f1 = 35E3f;
     double d1 = 12e4d; // "E" and "e" are both "exponential", not case sensitive
     System.out.println(f1);
