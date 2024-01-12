@@ -1,6 +1,12 @@
 import mypack.EmployeePosition.Developer;
 import mypack.EmployeePosition.TechLead;
+import mypack.EmployeePosition.Manager;
 import mypack.CompareUtils;
+import mypack.Employee;
+
+import java.util.Arrays;
+import java.util.Comparator;
+
 import mypack.BasicJava;
 
 public class Main {
@@ -25,8 +31,16 @@ public class Main {
 
     Developer empL = new Developer(23, "Huy", 1.6f);
     TechLead empR = new TechLead(23, "Dzung", 2f);
+    Manager newManager = new Manager(37, "Mickola", 8f);
     System.out.println(CompareUtils.compare(empL, empR));
     System.out.println(CompareUtils.compare(2, 3));
+
+    Employee[] allEmployees = {empL, empR, newManager};
+    Employee employeeMostSenior = Arrays
+      .stream( allEmployees)
+      .max(Comparator.comparing(Employee::getSeniority))
+      .orElse(null);
+    System.out.println("Employee with the most seniority is: "+employeeMostSenior);
 
     BasicInstance.printUserInput();
   };

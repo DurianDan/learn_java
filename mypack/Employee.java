@@ -29,4 +29,14 @@ public abstract class Employee {
   public float getSeniority() {
     return this.seniority;
   };
+
+  @Override
+  public String toString() {
+      return "Employee{" +
+              "\nage=" + age +
+              "\n, name='" + name + '\'' +
+              "\n, seniority=" + seniority +
+              "\n, position='" + getPosition() + '\'' +
+              "\n}";
+  }
 }

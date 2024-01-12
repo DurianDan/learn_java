@@ -28,4 +28,18 @@ public class EmployeePosition {
             return "Tech Lead";
         }
     }
+
+    public static class Manager extends Employee {
+        public Manager(
+                int age,
+                String name,
+                float seniority) {
+            super(age, name, seniority);
+        }
+
+        @Override
+        public String getPosition() {
+            return "Manager";
+        }
+    }
 }
