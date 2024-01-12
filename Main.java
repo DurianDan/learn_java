@@ -5,6 +5,7 @@ import mypack.CompareUtils;
 import mypack.Employee;
 import mypack.BasicJava;
 import mypack.LearnDateTime;
+import mypack.LearnHashMap;
 import mypack.CommonUtils;
 import mypack.LearnArray;
 
@@ -43,6 +44,8 @@ public class Main {
     LearnArray.employeesMostSenority(allEmployees);
     // Array string list
     LearnArray.leanrArrayList();
+
+    LearnHashMap.testLearn();
   };
 
   static void numbersTypes() {

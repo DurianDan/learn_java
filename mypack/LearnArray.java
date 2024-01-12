@@ -24,7 +24,7 @@ public class LearnArray {
         boxingPunchs.add("Straight");
         boxingPunchs.add("Uppercut");
         System.out.printf(
-            "There are %d punches %s\n",
+            "There are %d punches: %s\n",
             boxingPunchs.size(),
             boxingPunchs);
         System.out.println(
