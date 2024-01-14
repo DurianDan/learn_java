@@ -5,12 +5,18 @@ import mypack.LearnThreads.UnpredictableThread;
 import mypack.EmployeePosition.Manager;
 import mypack.CompareUtils;
 import mypack.Employee;
+
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.LocalDate;
+
 import mypack.BasicJava;
 import mypack.LearnDateTime;
 import mypack.LearnFileHandling;
 import mypack.LearnHashMap;
 import mypack.CommonUtils;
 import mypack.LearnArray;
+import mypack.TemperatureMeasurement;
 
 public class Main {
   public static void main(String[] args) {
@@ -61,6 +67,11 @@ public class Main {
     LearnFileHandling.createFile(fileName);
     LearnFileHandling.writeFile(fileName);
     LearnFileHandling.readFile(fileName);
+    // `record` keyword
+    TemperatureMeasurement testTemperature = new TemperatureMeasurement(
+      "Hanoi", 25.5f, LocalDateTime.now()
+    );
+    System.out.println(testTemperature);
   };
 
   static void numbersTypes() {
