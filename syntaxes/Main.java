@@ -7,8 +7,6 @@ import mypack.CompareUtils;
 import mypack.Employee;
 
 import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.LocalDate;
 
 import mypack.BasicJava;
 import mypack.LearnDateTime;
