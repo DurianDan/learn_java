@@ -3,6 +3,7 @@ package mypack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.OptionalInt;
 
 public class LearnArray {
     public static void employeesMostSenority(
@@ -14,8 +15,17 @@ public class LearnArray {
         .max(Comparator.comparing(Employee::getSeniority))
         .orElse(null);
       System.out.println("Employee with the most seniority is: "+employeeMostSenior);  
+    } 
+    public static OptionalInt testOptionalFunc(int num){
+        //  The Optional type can only be applied to pointers variables
+        //  Like string or arrays
+        // OptionalInt is implemented for int
+        System.err.println(num);
+        if (num > 19){
+            return OptionalInt.of(num+10);
+        }
+        return OptionalInt.empty();
     }
-
     public static void printEmployeePositions(
         Employee[] allEmployees
     ){

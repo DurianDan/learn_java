@@ -1,5 +1,11 @@
 package mypack;
 
+// Showcase Enum and Method overload
+// Enum can hold different "status" of an object, 
+// They are just strings represent real world concepts 
+
+// 2 methods can have the same name, but different output and param's types
+//  It's called "overloading"
 public class CompareUtils {
   public enum CompareResult {
     HIGHER, EQUAL, LOWER
