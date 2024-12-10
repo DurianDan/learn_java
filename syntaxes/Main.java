@@ -7,6 +7,7 @@ import mypack.CompareUtils;
 import mypack.Employee;
 
 import java.time.LocalDateTime;
+import java.util.Scanner;
 
 import mypack.BasicJava;
 import mypack.LearnDateTime;
@@ -19,6 +20,17 @@ import mypack.TemperatureMeasurement;
 public class Main {
   public static void main(String[] args) {
     System.out.println("Hello World");
+
+    // Check user input of type "boolean"
+    // Both "true" and "True" result in `true`
+    Scanner checkScannerFunc = new Scanner(System.in);
+    System.out.println("ENter your check :");
+    boolean checkValue = checkScannerFunc.nextBoolean();
+    System.err.printf("checkValue: %s\n", checkValue);
+    // If you close the Scanner instance "checkScannerFunc",
+    // it will also close the the input stream "System.in"
+    // And prevent the subsequent Scanner instances to read from this.
+    // Will Create run time error
 
     // static methods can be called without instance
     numbersTypes(); // can be called directly
