@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class LearnFileHandling {
-    public static void createFile(String targetDestination){
+        public static void createFile(String targetDestination){
         try {
             File myFile = new File(targetDestination);
             if (myFile.createNewFile()) {
