@@ -17,7 +17,7 @@ Before diving into Kafka and Flink, ensure you’re proficient in advanced Java 
 
 2. **Concurrency and Multithreading**:
    - Threads, `ExecutorService`, synchronization, and locks.
-   - Working with concurrent data structures (`ConcurrentHashMap`, `BlockingQueue`).
+   - Working with concurrent data structures (`ConcurrentHashMap>`, `BlockingQueue`).
    - **Book**: *Java Concurrency in Practice* by Brian Goetz.
    - **YouTube**: [Java Multithreading Tutorial](https://www.youtube.com/watch?v=Yg6-X1uSbiI)
 
